@@ -25,7 +25,7 @@ app.post("/api/friends", function(req, res){
     var Difference;
 
     //Loop through all possible users
-
+    
         //Inside the loop, make another loop that goes through each users score
 
             //compare the absolute difference of each score

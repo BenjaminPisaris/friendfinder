@@ -1,8 +1,8 @@
 //An Array that will hold all the friends objects
 var friends = [
     {
-        name:"Ahmed",
-        photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        name:"Ahmed I",
+        photo:"https://orig00.deviantart.net/7a2a/f/2014/095/a/b/the_sultan_ahmed_i_by_eduartinehistorise-d7d4zt8.jpg",
         scores:[
             "5",
             "1",
