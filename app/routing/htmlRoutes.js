@@ -5,10 +5,10 @@ module.exports = function(app) {
     //HTML get requests
     // the path /survey should load survey.html, anything else should redirect to home
     app.get("/survey", function(requests, results) {
-        res.sendFile(path.join(__dirname, "/../public/survey.html"));
+        results.sendFile(path.join(__dirname, "/../public/survey.html"));
     });
 
     app.get("*", function (requests, results) {
-        res.sendFile(path.join(__dirname, "/../public/home.html"))
+        results.sendFile(path.join(__dirname, "/../public/home.html"))
     });
 }
