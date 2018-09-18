@@ -2,6 +2,7 @@
 var friends = require("../data/friends");
 
 //Routing
+module.exports = function(app){
 //JSON the friends array from friends.js when the API is called
 app.get("/api/friends", function (req, res) {
     res.json(friends);
@@ -50,4 +51,4 @@ app.post("/api/friends", function (req, res) {
     friends.push(userData)
     //return a JSON with the users best match
     res.json(bestFriend);
-});
+})};
