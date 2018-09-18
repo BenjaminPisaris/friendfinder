@@ -32,7 +32,7 @@
                 strongly agree.</h3>
         </div>
         <div class="form-group">
-            <label for="question1">Reading fiction (such as novels and short stories) is more enjoyable than watching
+            <label>Reading fiction (such as novels and short stories) is more enjoyable than watching
                 movies.</label>
             <select class="form-control" id="question1">
                 <option value="1">1</option>
@@ -43,7 +43,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question2">Only people who earn a lot of money are successful.</label>
+            <label>Only people who earn a lot of money are successful.</label>
             <select class="form-control" id="question2">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -53,7 +53,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question3">Playing a game is fun only when you win. </label>
+            <label>Playing a game is fun only when you win. </label>
             <select class="form-control" id="question3">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -63,7 +63,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question4">You mix well with other people in social situations.</label>
+            <label>You mix well with other people in social situations.</label>
             <select class="form-control" id="question4">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -73,7 +73,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question5">You love trying new things.</label>
+            <label>You love trying new things.</label>
             <select class="form-control" id="question5">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -83,7 +83,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question6">You prefer shopping as opposed to saving all your money.</label>
+            <label>You prefer shopping as opposed to saving all your money.</label>
             <select class="form-control" id="question6">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -93,17 +93,17 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question7">You consider yourself a big fan of sports.</label>
-            <select class="form-control" id="question7">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <label">You consider yourself a big fan of sports.</label>
+                <select class="form-control" id="question7">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
         </div>
         <div class="form-group">
-            <label for="question8">Most of the time you would rather go to a nice restaurant instead of a bar.</label>
+            <label>Most of the time you would rather go to a nice restaurant instead of a bar.</label>
             <select class="form-control" id="question8">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -113,7 +113,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question9">You need the television on in order to fall asleep.</label>
+            <label>You need the television on in order to fall asleep.</label>
             <select class="form-control" id="question9">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -123,7 +123,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question10">You prefer the Bootstrap framework over Materialize.</label>
+            <label>You prefer the Bootstrap framework over Materialize.</label>
             <select class="form-control" id="question10">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -143,64 +143,64 @@
     </div>
     <div class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Closest Match</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Closest Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="bff-name"></h2>
+                    <img id="bff-img">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-              <h2 id="bff-name"></h2>
-              <img id="bff-img" src="">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
 
     <!-- Optional JavaScript -->
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script type="text/javascript">
-    $("#workPLS").click(function(event) {
-    //prevent a refresh on click
-    event.preventDefault();
-    //create an object for users data
-    var userData = {
-        name: $("#name").val(),
-        photo: $("#picURL").val(),
-        scores: [
-            $("question1").val(),
-            $("question2").val(),
-            $("question3").val(),
-            $("question4").val(),
-            $("question5").val(),
-            $("question6").val(),
-            $("question7").val(),
-            $("question8").val(),
-            $("question9").val(),
-            $("question10").val(),
-        ]
-    }
-    //AJAX the data to the friends API
-    $.post("/api/friends", userData, function(data){
-        $("#bff-name").text(data.name);
-        $("bff-img").attr("src", data.photo);
+        $("#workPLS").click(function (event) {
+            //prevent a refresh on click
+            event.preventDefault();
+            //create an object for users data
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#picURL").val(),
+                scores: [
+                    $("#question1 option:selected").val(),
+                    $("#question2 option:selected").val(),
+                    $("#question3 option:selected").val(),
+                    $("#question4 option:selected").val(),
+                    $("#question5 option:selected").val(),
+                    $("#question6 option:selected").val(),
+                    $("#question7 option:selected").val(),
+                    $("#question8 option:selected").val(),
+                    $("#question9 option:selected").val(),
+                    $("#question10 option:selected").val()
+                ]
 
-        //display the modal
-        $("#results").modal("toggle");
-    });
-});
-</script>
+            }
+            console.log(userData)
+            //AJAX the data to the friends API
+            $.post("/api/friends", userData, function (data) {
+                $("#bff-name").text(data.name);
+                $("bff-img").attr("src", data.photo);
+
+                //display the modal
+                $("#results").modal("toggle");
+            });
+        });
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"

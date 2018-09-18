@@ -29,11 +29,11 @@ module.exports = function (app) {
         for (var i = 0; i < friends.length; i++) {
             //Inside the loop, make another loop that goes through each users score
             var friend = friends[i];
-            difference = 0;
+            var difference = 0;
             //log friend.name for troubleshooting
             console.log(friend.name);
             //compare the absolute difference of each score
-            for (x = 0; x < friend.scores.length; x++) {
+            for (x = 1; x < friend.scores.length; x++) {
                 var friendScore = friend.scores[x];
                 var myScore = userScores[x];
                 difference += Math.abs(parseInt(myScore) - parseInt(friendScore));
@@ -43,7 +43,8 @@ module.exports = function (app) {
                 //make that your new bestFriend
                 bestFriend.name = friend.name;
                 bestFriend.photo = friend.photo;
-                scoreDiff = difference;
+                bestFriend.scoreDiff = difference;
+                
             }
 
 
@@ -52,5 +53,6 @@ module.exports = function (app) {
         friends.push(userData)
         //return a JSON with the users best match
         res.json(bestFriend);
+        console.log(bestFriend);
     })
 };
