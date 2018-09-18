@@ -164,7 +164,37 @@
 
 
     <!-- Optional JavaScript -->
-    <script src="results.js"></script>
+    <script type="text/javascript">
+    $("#workPLS").click(function(event) {
+    //prevent a refresh on click
+    event.preventDefault();
+    //create an object for users data
+    var userData = {
+        name: $("#name").val(),
+        photo: $("#picURL").val(),
+        scores: [
+            $("question1").val(),
+            $("question2").val(),
+            $("question3").val(),
+            $("question4").val(),
+            $("question5").val(),
+            $("question6").val(),
+            $("question7").val(),
+            $("question8").val(),
+            $("question9").val(),
+            $("question10").val(),
+        ]
+    }
+    //AJAX the data to the friends API
+    $.post("/api/friends", userData, function(data){
+        $("#bff-name").text(data.name);
+        $("bff-img").attr("src", data.photo);
+
+        //display the modal
+        $("#results").modal("toggle");
+    });
+});
+</script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@ module.exports = function(app) {
         results.sendFile(path.join(__dirname, "/../public/survey.html"));
     });
 
-    app.get("*", function (requests, results) {
+    app.get("/", function (requests, results) {
         results.sendFile(path.join(__dirname, "/../public/home.html"))
     });
 }
