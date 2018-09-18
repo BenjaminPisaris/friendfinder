@@ -20,6 +20,10 @@ $("#workPLS").click(function(event) {
     }
     //AJAX the data to the friends API
     $.post("/api/friends", userData, function(data){
-        
+        $("#bff-name").text(data.name);
+        $("bff-img").attr("src", data.photo);
+
+        //display the modal
+        $("#results").modal("toggle");
     })
 })
