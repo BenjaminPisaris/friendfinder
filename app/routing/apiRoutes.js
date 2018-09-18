@@ -1,5 +1,5 @@
 //Load data from /../data/friends.js
-var friends = require("friends");
+var friends = require("../data/friends");
 
 //Routing
 //JSON the friends array from friends.js when the API is called
