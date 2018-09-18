@@ -1,5 +1,5 @@
 //An Array that will hold all the friends objects
-module.exports(app) {
+
 var friends = [
     {
         name:"Ahmed I",
@@ -48,5 +48,6 @@ var friends = [
           ]
       },
      
-]
-};
+];
+
+module.exports = friends
